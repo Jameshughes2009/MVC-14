@@ -24,6 +24,13 @@ Comment.init(
                 key: 'id',
             },
         },
+        comment_text: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                len: [1],
+            }
+        }
     },
     {
         sequelize,
