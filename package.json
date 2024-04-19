@@ -1,0 +1,10 @@
+{
+    "name": "Tech-Blog",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Jameshughes2009/MVC-14"
+    }
+}
