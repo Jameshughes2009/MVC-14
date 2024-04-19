@@ -14,3 +14,5 @@ router.post('/', withAuth, async (req, res) => {
         res.status
     }
 })
+
+module.exports = router;
