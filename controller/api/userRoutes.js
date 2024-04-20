@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
 });
 
 
-// sihn up function 
+// New sign up function 
 router.post('/signup', async (req, res) => {
     try {
         const newUser = new User();
@@ -21,6 +21,16 @@ router.post('/signup', async (req, res) => {
         newUser.email = req.body.email;
         newUser.password = req.body.password;
 
-        
+        const userData = await newUser.save();
+        req.session.save(() =>{
+            req.session.user_id = userData.id;
+            req.session.logged_in = true;
+            res.status(200).json(userData);
+        });
+    } catch (err) {
+        res.status(400).json(err);
+        console.log(err)
     }
-})
+});
+
+// The Functions used to login 
