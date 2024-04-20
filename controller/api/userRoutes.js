@@ -14,4 +14,13 @@ router.get('/', (req, res) => {
 
 
 // sihn up function 
-router.post("/si")
+router.post('/signup', async (req, res) => {
+    try {
+        const newUser = new User();
+        newUser.username = req.body.username;
+        newUser.email = req.body.email;
+        newUser.password = req.body.password;
+
+        
+    }
+})

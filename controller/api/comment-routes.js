@@ -11,8 +11,8 @@ router.post('/', withAuth, async (req, res) => {
         });
         res.status(200).json(newComment);
     } catch(err) {
-        res.status
+        res.status(400).json(err);
     }
-})
+});
 
 module.exports = router;
