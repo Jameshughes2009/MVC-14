@@ -34,3 +34,4 @@ router.post('/signup', async (req, res) => {
 });
 
 // The Functions used to login 
+
