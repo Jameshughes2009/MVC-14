@@ -26,7 +26,7 @@ const sequelize = require('../config/connection');
 const seedAll = async () => {
     await sequelize.sync({ force: true});
     await seedUsers();
-        // console.log("users seeded");
+        console.log("users seeded");
     await seedPosts();
     process.exit(0);
 };
