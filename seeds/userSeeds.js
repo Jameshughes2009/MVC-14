@@ -12,10 +12,10 @@ const userData = [
     {
         username: "oldfart",
         email: "oldfart@microbix.com",
-        password: "password1"
+        password: "password134"
     }
 ];
 
 const seedUsers = () => User.bulkCreate(userData);
 
-module.exports = seedUsers
+module.exports = seedUsers;
